@@ -32,7 +32,8 @@ EMAIL = "j_david@live.ca"
 APPSTORE_BASE = "https://apps.apple.com/ca/app/fort-et-ch%C3%A2teau/id6811432420"
 APPSTORE = {"fr": APPSTORE_BASE + "?l=fr-CA", "en": APPSTORE_BASE + "?l=en-CA"}
 TODAY = date.today().isoformat()
-VER_ASSETS = date.today().strftime("%Y%m%d") + "a"   # change à chaque génération : force les navigateurs à recharger le CSS et le JS
+import hashlib
+VER_ASSETS = hashlib.md5(b"".join((ROOT / f).read_bytes() for f in ("public/assets/css/style.css", "public/assets/js/main.js"))).hexdigest()[:8]   # empreinte du CSS et du JS : les navigateurs rechargent dès qu'ils changent
 UPDATED = {"fr": "29 octobre 2026", "en": "October 29, 2026"}
 
 NEW13 = {"alcazar-de-tolede", "castillo-san-felipe-de-barajas", "chateau-d-angers", "chateau-d-eilean-donan", "chateau-de-blarney", "chateau-de-bunratty",
@@ -77,7 +78,7 @@ FILES = {
 NAV_ORDER = ["home", "features", "catalog", "download", "contact"]
 FOOT_ORDER = ["home", "features", "catalog", "download", "contact", "privacy", "credits"]
 LABEL = {
-    "fr": {"home": "Accueil", "features": "Fonctionnalités", "catalog": "Catalogue", "download": "Téléchargement", "contact": "Contact", "privacy": "Confidentialité", "credits": "Crédits photo"},
+    "fr": {"home": "Accueil", "features": "Fonctions", "catalog": "Catalogue", "download": "Téléchargement", "contact": "Contact", "privacy": "Confidentialité", "credits": "Crédits photo"},
     "en": {"home": "Home", "features": "Features", "catalog": "Catalog", "download": "Download", "contact": "Contact", "privacy": "Privacy", "credits": "Photo credits"},
 }
 UI = {
@@ -269,7 +270,8 @@ def home(lang):
 
     hero = f"""<section class="hero">
   <div class="container hero__grid">
-    <div>
+    <div class="hero__logo"><img src="../assets/img/title-{lang}.webp" alt="{'Logo Fort et Château' if fr else 'Fort et Château logo (Fort and Castle)'}" width="1000" height="545"></div>
+    <div class="hero__text">
       <p class="eyebrow">{eyebrow}</p>
       <h1>{h1}</h1>
       <p class="lead">{lead}</p>
