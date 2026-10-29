@@ -612,7 +612,9 @@ def root_files():
     (PUB / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
     (PUB / "_headers").write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n\n/assets/*\n  Cache-Control: public, max-age=3600\n")
     (PUB / "8037ed04e2a33a44c0c6bf1523c7e159.txt").write_text("8037ed04e2a33a44c0c6bf1523c7e159")
-    (PUB / "googlece2393743df5c567.html").write_text("google-site-verification: googlece2393743df5c567.html")
+    # Fichiers de validation Google Search Console (le jeton dépend du compte Google : on garde les deux)
+    for token in ("googlece2393743df5c567", "google436d32a0339b56a5"):
+        (PUB / f"{token}.html").write_text(f"google-site-verification: {token}.html")
 
 
 def main():
