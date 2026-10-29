@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://fortchateau.netlify.app/fr/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/index.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/index.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/fr/fonctionnalites.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/fonctionnalites.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/features.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/fonctionnalites.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/en/features.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/fonctionnalites.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/features.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/fonctionnalites.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/fr/catalogue.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/catalogue.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/catalog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/catalogue.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/en/catalog.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/catalogue.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/catalog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/catalogue.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/fr/telechargement.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/telechargement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/download.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/telechargement.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/en/download.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/telechargement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/download.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/telechargement.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/fr/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/contact.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/contact.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/fr/confidentialite.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/confidentialite.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/confidentialite.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/fr/credits-photos.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/credits-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/photo-credits.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/credits-photos.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fortchateau.netlify.app/en/photo-credits.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fortchateau.netlify.app/fr/credits-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fortchateau.netlify.app/en/photo-credits.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fortchateau.netlify.app/fr/credits-photos.html"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
