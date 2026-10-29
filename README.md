@@ -9,7 +9,6 @@ Site statique (FR + EN) de l'app Fort et Château, publié sur Netlify : https:/
 - `tools/build.py` : génère toutes les pages HTML (FR/EN), le sitemap, robots.txt, 404
 - `tools/check_site.py` : vérifie les liens et les balises essentielles
 - `netlify.toml` : indique à Netlify de publier `public/`
-- `.github/workflows/pages.yml` : copie gratuite sur GitHub Pages à chaque push (utile quand les crédits Netlify sont épuisés)
 
 ## Interrupteur LIVE13 (en haut de `tools/build.py`)
 
