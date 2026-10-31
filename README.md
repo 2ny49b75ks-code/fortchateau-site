@@ -12,10 +12,10 @@ Site statique (FR + EN) de l'app Fort et Château, publié sur Netlify : https:/
 
 ## Interrupteur LIVE13 (en haut de `tools/build.py`)
 
-- `LIVE13 = False` : l'app en ligne est la 1.2 (payante, 131 sites). Le site ne dit ni « gratuit », ni « achat unique », ne montre pas les 25 nouveaux châteaux et utilise les captures 1.2.
-- `LIVE13 = True` : la 1.3 est en ligne (gratuite + achat unique, 156 sites, récits du Barde regroupés).
+- `LIVE13 = False` : (état d'avant le 2026-10-31) l'app en ligne était la 1.2 (payante, 131 sites). Le site ne dit ni « gratuit », ni « achat unique », ne montre pas les 25 nouveaux châteaux et utilise les captures 1.2.
+- `LIVE13 = True` (**état actuel depuis le 2026-10-31**) : la 1.3 est en ligne (version 1.3.1 sur l'App Store) (gratuite + achat unique, 156 sites, récits du Barde regroupés).
 
-**Le jour de la sortie de la 1.3 :** mettre `LIVE13 = True`, lancer `python3 tools/build.py`, `python3 tools/check_site.py`, puis commit + push (Netlify republie seul).
+(Le passage à `True` est fait.)
 Aperçu de l'état « 1.3 » sans toucher au site : `python3 tools/build.py --live13 --out public_preview13` (dossier ignoré par git).
 
 ## Mettre à jour

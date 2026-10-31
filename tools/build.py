@@ -7,10 +7,10 @@ assets/, sitemap.xml, robots.txt, 404, redirection de langue à la racine.
 Le catalogue vient de data/sites.json (lu dans le code de l'app par tools/extract_data.py).
 
 INTERRUPTEUR LIVE13 :
-  False (état actuel) = l'app en ligne est la 1.2 (payante, 131 sites) : le site ne parle ni de « gratuit », ni
+  False               = l'app en ligne est la 1.2 (payante, 131 sites) : le site ne parle ni de « gratuit », ni
                         d'achat unique, ni des 25 nouveaux châteaux, et utilise les captures 1.2.
-  True                = la 1.3 est en ligne (gratuite + achat unique, 156 sites, récits du Barde regroupés).
-Le jour de la sortie de la 1.3 : passer LIVE13 à True, lancer ce script, commit + push.
+  True (état actuel)  = la 1.3 est en ligne depuis le 2026-10-31 (version 1.3.1 : gratuite + achat unique, 156 sites,
+                        récits du Barde regroupés).
 
 Lancer :  python3 tools/extract_data.py ; python3 tools/prepare_assets.py   (une fois, ou après de nouveaux sites/captures)
           python3 tools/build.py                                          (après toute modification), puis commit + push."""
@@ -21,7 +21,7 @@ import unicodedata
 from datetime import date
 from pathlib import Path
 
-LIVE13 = False
+LIVE13 = True
 if "--live13" in sys.argv:        # aperçu : python3 tools/build.py --live13 --out public_preview13
     LIVE13 = True
 
@@ -293,6 +293,7 @@ def home(lang):
             items = [f"Fort et Château est maintenant gratuit à télécharger : un site par pays est offert ({FREE} forts et châteaux emblématiques), un achat unique débloque tout le reste",
                      "25 nouveaux forts et châteaux, dont 6 nouveaux pays : Autriche, Belgique, Slovénie, Norvège, Mexique et Colombie",
                      "Nouvelle section « Les récits du Barde » : tous les sites racontés, réunis par pays",
+                     "Les personnes qui avaient déjà acheté l'app gardent tout débloqué, sans frais supplémentaires",
                      f"Au total : {N} sites dans {C} pays"]
             news = ('<section class="section--tight"><div class="container"><div class="card card--new"><span class="badge-new">Nouveauté</span>'
                     '<h2 style="margin-top:16px">Version 1.3 : gratuite, plus de châteaux</h2>'
@@ -302,6 +303,7 @@ def home(lang):
             items = [f"Fort et Château is now free to download: one site per country is included ({FREE} emblematic forts and castles), and a one-time purchase unlocks the rest",
                      "25 new forts and castles, including 6 new countries: Austria, Belgium, Slovenia, Norway, Mexico and Colombia",
                      "New “The Bard's Tales” section: every narrated site, grouped by country",
+                     "Anyone who already bought the app keeps everything unlocked, at no extra cost",
                      f"In total: {N} sites in {C} countries"]
             news = ('<section class="section--tight"><div class="container"><div class="card card--new"><span class="badge-new">New</span>'
                     '<h2 style="margin-top:16px">Version 1.3: free, and more castles</h2>'
@@ -464,7 +466,7 @@ def download(lang):
     pl = ""
     if LIVE13:
         pl = (f'<section class="section--alt"><div class="container"><div class="section-head"><p class="eyebrow">{"Gratuit, puis un seul achat" if fr else "Free, then one purchase"}</p><h2>{"Comment ça marche" if fr else "How it works"}</h2>'
-              f'<p class="lead">{"Téléchargez l’app gratuitement : un site par pays est offert. Pour tout débloquer, touchez « Débloquer » dans l’app : un seul achat, sans abonnement, valable pour toujours. Vous changez d’appareil ? Touchez « Restaurer mon achat »." if fr else "Download the app for free: one site per country is included. To unlock everything, tap “Unlock” in the app: a single purchase, no subscription, yours forever. New device? Tap “Restore my purchase”."}</p></div>{plans(lang)}</div></section>')
+              f'<p class="lead">{"Téléchargez l’app gratuitement : un site par pays est offert. Pour tout débloquer, touchez « Débloquer » dans l’app : un seul achat, sans abonnement, valable pour toujours. Vous changez d’appareil ? Touchez « Restaurer mon achat ». Vous aviez déjà acheté l’app ? Tout reste débloqué, sans frais." if fr else "Download the app for free: one site per country is included. To unlock everything, tap “Unlock” in the app: a single purchase, no subscription, yours forever. New device? Tap “Restore my purchase”. Already bought the app? Everything stays unlocked, at no extra cost."}</p></div>{plans(lang)}</div></section>')
     body = (f'<section class="page-head"><div class="container"><p class="eyebrow">{LABEL[lang]["download"]}</p><h1>{"Partez à la découverte" if fr else "Set off to discover"}</h1>'
             f'<p class="lead">{"Fort et Château est disponible sur l’App Store." if fr else "Fort et Château is available on the App Store."}</p><div class="hero__actions">{store_btn(lang)}</div></div></section>'
             f'<section><div class="container"><div class="section-head"><h2>{"Configuration requise" if fr else "Requirements"}</h2></div><div class="grid-3">{rows}</div></div></section>{pl}' + cta_band(lang))
@@ -482,7 +484,8 @@ def faq_items(lang):
               ("Y a-t-il une version iPad ?", "Oui, l'app est conçue pour l'iPhone et l'iPad.")]
         if LIVE13:
             q += [("Comment débloquer tous les châteaux ?", "Touchez la rangée dorée « Débloquer les autres châteaux » en haut du menu, ou le bouton « Tout débloquer » sur la fiche d'un site verrouillé. L'achat est unique, sans abonnement."),
-                  ("J'ai changé d'iPhone : comment retrouver mon achat ?", "Ouvrez l'écran de déblocage et touchez « Restaurer mon achat », avec le même identifiant Apple.")]
+                  ("J'ai changé d'iPhone : comment retrouver mon achat ?", "Ouvrez l'écran de déblocage et touchez « Restaurer mon achat », avec le même identifiant Apple."),
+                  ("J'avais acheté l'app avant qu'elle devienne gratuite : dois-je repayer ?", "Non. Les personnes qui avaient déjà acheté l'app gardent tout débloqué, sans frais supplémentaires.")]
         q += [("Un château manque ou une information est erronée.", f"Écrivez-nous à {EMAIL} : nous ajoutons des sites et corrigeons les fiches régulièrement."),
               ("D'où viennent les photos ?", "De Wikimedia Commons, sous licences libres. Le crédit de chaque photo est affiché sous l'image dans l'app et listé sur la page des crédits photo.")]
     else:
@@ -493,7 +496,8 @@ def faq_items(lang):
               ("Is there an iPad version?", "Yes, the app is designed for iPhone and iPad.")]
         if LIVE13:
             q += [("How do I unlock every castle?", "Tap the gold row “Unlock the other castles” at the top of the menu, or the “Unlock everything” button on a locked site's page. It is a one-time purchase, no subscription."),
-                  ("I got a new iPhone: how do I get my purchase back?", "Open the unlock screen and tap “Restore my purchase”, with the same Apple ID.")]
+                  ("I got a new iPhone: how do I get my purchase back?", "Open the unlock screen and tap “Restore my purchase”, with the same Apple ID."),
+                  ("I bought the app before it became free: do I have to pay again?", "No. Anyone who already bought the app keeps everything unlocked, at no extra cost.")]
         q += [("A castle is missing or a detail is wrong.", f"Write to us at {EMAIL}: we add sites and fix pages regularly."),
               ("Where do the photos come from?", "From Wikimedia Commons, under free licenses. Each photo's credit is shown under the image in the app and listed on the photo credits page.")]
     return q
